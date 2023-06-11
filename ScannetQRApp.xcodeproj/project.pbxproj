@@ -11,6 +11,9 @@
 		2029DAA22A2758AA00D86BE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029DAA12A2758AA00D86BE6 /* ContentView.swift */; };
 		2029DAA42A2758AB00D86BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2029DAA32A2758AB00D86BE6 /* Assets.xcassets */; };
 		2029DAA72A2758AB00D86BE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2029DAA62A2758AB00D86BE6 /* Preview Assets.xcassets */; };
+		2029DAAE2A275F5E00D86BE6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029DAAD2A275F5E00D86BE6 /* CameraView.swift */; };
+		2029DAB02A27644A00D86BE6 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029DAAF2A27644A00D86BE6 /* Permission.swift */; };
+		2029DAB32A276D3B00D86BE6 /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029DAB22A276D3B00D86BE6 /* QRScannerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		2029DAA12A2758AA00D86BE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2029DAA32A2758AB00D86BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2029DAA62A2758AB00D86BE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2029DAAD2A275F5E00D86BE6 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		2029DAAF2A27644A00D86BE6 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		2029DAB12A27666F00D86BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2029DAB22A276D3B00D86BE6 /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,11 @@
 		2029DA9E2A2758AA00D86BE6 /* ScannetQRApp */ = {
 			isa = PBXGroup;
 			children = (
+				2029DAB12A27666F00D86BE6 /* Info.plist */,
 				2029DA9F2A2758AA00D86BE6 /* ScannetQRAppApp.swift */,
 				2029DAA12A2758AA00D86BE6 /* ContentView.swift */,
+				2029DAAD2A275F5E00D86BE6 /* CameraView.swift */,
+				2029DAB42A276D4500D86BE6 /* Model */,
 				2029DAA32A2758AB00D86BE6 /* Assets.xcassets */,
 				2029DAA52A2758AB00D86BE6 /* Preview Content */,
 			);
@@ -65,6 +75,15 @@
 				2029DAA62A2758AB00D86BE6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2029DAB42A276D4500D86BE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2029DAAF2A27644A00D86BE6 /* Permission.swift */,
+				2029DAB22A276D3B00D86BE6 /* QRScannerDelegate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2029DAB02A27644A00D86BE6 /* Permission.swift in Sources */,
+				2029DAAE2A275F5E00D86BE6 /* CameraView.swift in Sources */,
+				2029DAB32A276D3B00D86BE6 /* QRScannerDelegate.swift in Sources */,
 				2029DAA22A2758AA00D86BE6 /* ContentView.swift in Sources */,
 				2029DAA02A2758AA00D86BE6 /* ScannetQRAppApp.swift in Sources */,
 			);
@@ -195,7 +217,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,6 +292,8 @@
 				DEVELOPMENT_TEAM = 52CHWJ7645;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScannetQRApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +323,8 @@
 				DEVELOPMENT_TEAM = 52CHWJ7645;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScannetQRApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
